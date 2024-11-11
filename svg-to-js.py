@@ -57,7 +57,7 @@ js.write("""var icons = {
 for filename in sorted(os.listdir("icon-svg")):
     icon = os.path.join("icon-svg", filename)
     # checking if it is a file
-    if os.path.isfile(icon):
+    if os.path.isfile(icon) and filename != '.DS_Store':
         svg = open(icon, 'r').read()
 
         # Parse SVG as XML
